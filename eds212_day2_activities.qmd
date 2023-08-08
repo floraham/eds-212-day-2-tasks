@@ -7,5 +7,30 @@ editor: visual
 library(tidyverse)
 library(palmerpenguins)
 
+#first function to evaluate
+fx = expression(x^2)
+dx = D(fx,"x")
+x <- 3
+eval(dx)
+
+#second function to evaluate 
+pa = expression (2*(3*a + 2)^4 - 5)
+da = D(pa, "a")
+a <- 1.2
+eval(da)
+
+
 ```
+## Section 4: make another penguin plot 
+
+```{r}
+
+ggplot(data=penguins, 
+       aes(x=bill_length_mm, y=bill_depth_mm), color=)+
+         geom_jitter()+
+         labs(title = "penguin length vs. bill depth")
+
+```
+
+
 
