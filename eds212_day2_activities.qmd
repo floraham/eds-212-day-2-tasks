@@ -26,7 +26,7 @@ eval(da)
 ```{r}
 
 ggplot(data=penguins, 
-       aes(x=bill_length_mm, y=bill_depth_mm), color=)+
+       aes(x=bill_length_mm, y=bill_depth_mm, color = species))+
          geom_jitter()+
          labs(title = "penguin length vs. bill depth")
 
